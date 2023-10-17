@@ -1,5 +1,4 @@
 import java.util.Scanner;
-import java.util.Random;
 
 public class Jogo {
     private Tabuleiro tabuleiro;
@@ -79,12 +78,12 @@ public class Jogo {
     }
 
     public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
+        Scanner input = new Scanner(System.in); // Traz a utilidade de scanner
         System.out.println("BEM-VINDO AO JOGO DA [[Pessoa de idade avancada]]!");
-        System.out.print("Deseja jogar contra o computador? (S/N): ");
-        boolean VsCpu = input.nextLine().equalsIgnoreCase("S");
+        System.out.print("Jogar contra o computador? (S/N): ");
+        boolean VsCpu = input.nextLine().equalsIgnoreCase("S"); // Se a comparação for igual a S
 
-        Jogo jogo = new Jogo(VsCpu);
+        Jogo jogo = new Jogo(VsCpu); // Inicializar o jogo
         jogo.jogar();
     }
 }
