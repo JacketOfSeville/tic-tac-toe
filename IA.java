@@ -24,7 +24,7 @@ public class IA {
 
   private int minimax(char[][] tabuleiro, int profundidade, boolean maximizando) {
     if (tabuleiroCheio(tabuleiro)) {
-        return 0;
+        return 0; // Se estiver cheio, retorne 0
     }
 
     if (verificarVencedor(tabuleiro)) {
@@ -75,7 +75,7 @@ public class IA {
     }
 
     if (tabuleiro[0][0] != ' ' && tabuleiro[0][0] == tabuleiro[1][1] && tabuleiro[1][1] == tabuleiro[2][2]) {
-        return true; // Verifica a diagonal principal
+        return true; // Verifica a diagonal principal se 
     }
     if (tabuleiro[0][2] != ' ' && tabuleiro[0][2] == tabuleiro[1][1] && tabuleiro[1][1] == tabuleiro[2][0]) {
         return true; // Verifica a diagonal secundária

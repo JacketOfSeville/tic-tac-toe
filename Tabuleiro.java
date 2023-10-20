@@ -2,28 +2,28 @@ public class Tabuleiro {
     private char[][] tabuleiro;
 
     public Tabuleiro() {
-        this.tabuleiro = new char[3][3];
+        this.tabuleiro = new char[3][3]; // Cria o tabuleiro
         startTabuleiro();
     }
 
     private void startTabuleiro() {
         for (int i = 0; i < 3; i++) {
-            for (int j = 0; j < 3; j++) {
+            for (int j = 0; j < 3; j++) { // Inicializa o tabuleiro
                 tabuleiro[i][j] = ' ';
             }
         }
     }
 
     public char[][] getTabuleiro() {
-        return tabuleiro;
+        return tabuleiro; // Retorna o tabuleiro
     }
 
     public boolean fazerJogada(int linha, int coluna, char jogador) {
         if (linha < 0 || linha > 2 || coluna < 0 || coluna > 2) {
-            return false;
+            return false; // Se estiver dentro do alcance
         }
         if (tabuleiro[linha][coluna] == ' ') {
-            tabuleiro[linha][coluna] = jogador;
+            tabuleiro[linha][coluna] = jogador; // se estiver vago
             return true;
         }
         return false;
