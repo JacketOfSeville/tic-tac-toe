@@ -1,5 +1,5 @@
 public class IA {
-  public int[] fazerMelhorJogada(char[][] tabuleiro) {
+  public int[] fazerJogada(char[][] tabuleiro) {
       int melhorValor = Integer.MIN_VALUE;
       int[] melhorJogada = {-1, -1};
 

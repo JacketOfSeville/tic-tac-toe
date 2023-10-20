@@ -45,7 +45,7 @@ public class Jogo {
     private void makePlay() {
         int linha, coluna;
         if (VsCpu && jogadorAtual == 'O') {
-            int[] jogadaIA = ia.fazerMelhorJogada(tabuleiro.getTabuleiro());
+            int[] jogadaIA = ia.fazerJogada(tabuleiro.getTabuleiro());
             linha = jogadaIA[0];
             System.out.print(linha);
             coluna = jogadaIA[1];
